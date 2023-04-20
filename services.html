@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/e606e08cbb.js" crossorigin="anonymous"></script>
+    <title>Yog Siksha | SERVICES</title>
+</head>
+<body>
+    <nav class="navbar bg-dark">
+        <div class="container">
+          <h1 class="logo lg-heading text-light"><img src="./yog-sikhsha-logo.png" alt="yoga logo" class="main-logo">Yog Siksha</h1> 
+            
+            <ul class="nav-items">
+                <li class="nav-item"><a href="./home.html">Home</a></li>
+                <li class="nav-item"><a href="./about.html">About</a></li>
+                <li class="nav-item"><a href="./services.html">services</a></li>
+                <li class="nav-item"><a href="./contact.html">Contact</a></li>
+                <li class="nav-item sign-in"><a href="./login.html">Sign in</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <h1>Book Your Slot</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter Your Name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter Your Email ID" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" placeholder="Enter Your Contact Number" required />
+      </div>
+      <div class="form-group">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" required />
+      </div>
+      <div class="form-group">
+        <label for="time">Select Time:</label>
+        <select id="time" required>
+          <option value="">--Select Time--</option>
+          <option value="06:00 AM - 07:00 AM">06:00 AM - 07:00 AM</option>
+          <option value="07:00 AM - 08:00 AM">07:00 AM - 08:00 AM</option>
+          <option value="08:00 AM - 09:00 AM">08:00 AM - 09:00 AM</option>
+          <option value="05:00 PM - 06:00 PM">05:00 PM - 06:00 PM</option>
+          <option value="06:00 PM - 07:00 PM">06:00 PM - 07:00 PM</option>
+          <option value="07:00 PM - 08:00 PM">07:00 PM - 08:00 PM</option>
+        </select>
+      </div>
+      <a type="submit" class="btn btn-secondary md-heading book-slot-btn">Book Slot</a>
+      <!-- <button type="submit"></button> -->
+    </form>
+        <!-- <div class="services-container">
+            <div class="book-slot">Book Your Slot</div>
+            <div class="services-column">
+                
+                <div class="service-showcase showcase1">
+                    <div class="services-image"><img src="pic1.jpg" alt=""></div>
+                    <div class="duration 3-months"><h2>49$ for 3 months</h2></div>
+                    <div class="md-heading text-light"><a href="" class="btn btn-secondary">submit & pay</a></div>
+                </div>
+
+                <div class="service-showcase showcase2">
+                    <div class="services-image"><img src="pic1.jpg" alt=""></div>
+                    <div class="duration 6-months"><h2>49$ for 6 months</h2></div>
+                    <div class="md-heading text-light"><a href="" class="btn btn-secondary">submit & pay</a></div>
+                </div>
+
+                <div class="service-showcase showcase3">
+                    <div class="services-image"><img src="pic1.jpg" alt=""></div>
+                    <div class="duration 12-months"><h2>49$ for 12 months</h2></div>
+                    <div class="md-heading text-light"><a href="" class="btn btn-secondary">submit & pay</a></div>
+                </div>
+            </div>
+            
+        </div> -->
+            
+    </section>
+    <footer class="footer">
+        <div class="social-media-links">
+            <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook fa-3x"></a>
+            <a href="#" class="fab fa-twitter fa-3x"></a>
+            <a href="https://www.instagram.com/devbhoomi_yoga/" target="_blank" class="fab fa-instagram fa-3x"></a>
+        </div>
+        <p>Yog Siksha &copy; 2022, All Right Reserved</p>
+    </footer>
+    <script>
+        // Get the form element
+const form = document.querySelector("form");
+
+// Add an event listener for form submission
+form.addEventListener("submit", function (event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  // Get the user inputs
+  const name = document.querySelector("#name").value;
+  const email = document.querySelector("#email").value;
+  const phone = document.querySelector("#phone").value;
+  const date = document.querySelector("#date").value;
+  const time = document.querySelector("#time").value;
+
+  // Create a success message
+  const message = `Thank you for booking your yoga slot, ${name}! 
+    You have booked a session on ${date} at ${time}. 
+    A confirmation email will be sent to ${email}. 
+    In case of any change in the schedule, we will contact you at ${phone}.`;
+
+  // Display the message in an alert box
+  alert(message);
+
+  // Reset the form
+  form.reset();
+});
+
+    </script>
+    
+</body>
+</html>

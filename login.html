@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/e606e08cbb.js" crossorigin="anonymous"></script>
+    <title>Yog Siksha | LOGIN/SIGN UP</title>
+</head>
+<body>
+    <nav class="navbar bg-dark">
+        <div class="container">
+            <h1 class="logo lg-heading text-light"><img src="./yog-sikhsha-logo.png" alt="yoga logo" class="main-logo">Yog Siksha</h1> 
+            
+            <ul class="nav-items">
+             <li class="nav-item"><a href="./home.html">Home</a></li>
+             <li class="nav-item"><a href="./about.html">About</a></li>
+             <li class="nav-item"><a href="./services.html">services</a></li>
+             <li class="nav-item"><a href="./contact.html">Contact</a></li>
+             <li class="nav-item sign-in"><a href="./login.html">Sign in</a></li>
+            </ul>
+        </div>
+    </nav>
+        <div class="hero">
+            <span class="escapeButton">&times;</span>
+            <!-- <img src="pic1.jpg" alt=""> -->
+            <div class="form-box">
+                <h1 id="title">Sign Up</h1>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><img src="fblogo.png" class="fb"></a> 
+                    <a href="https://www.instagram.com" target="_blank"><img src="instalogo.png" class="insta"></a>
+                    <a href="https://www.twitter.com" target="_blank"><img src="twilogo.png" class="twi"></a> 
+                </div>
+
+                <form id="login" class="input-group">
+                    <div class="input-group">
+                        <div class="input-field" id="nameField">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="Email" placeholder="Email id" required>        
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password" required>        
+                        </div>
+                        <p>Lost Password <a href="#">Click Here!</a></p>
+                            <!-- <input type="checkbox" class="check-box"><span>Remember Password</span> -->
+                            
+                    </div>
+                    <div class="btn-field">
+                        <button type="button" id="signupBtn"><strong> Sign up</strong></button>
+                        <button type="button" class="disable" id="signinBtn"><strong> Sign in</strong></button>
+                    </div>
+                </form>
+
+                <!-- <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                    <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                </div> -->
+                
+                           
+                
+                <!-- <form id="register" class="input-group">
+                    <input type="text" class="input-field" placeholder="User ID" required>
+                    
+                    
+                    <input type="checkbox" class="check-box"><span>I agree to the Terms & Conditions</span>
+                    <button type="submit" class="submit-btn"><strong>Register</strong></button>
+                </form> -->
+            </div>
+           
+        </div>
+        <script>
+            let signupBtn = document.getElementById("signupBtn");
+            let signinBtn = document.getElementById("signinBtn");
+            let nameField = document.getElementById("nameField");
+            let title = document.getElementById("title");
+
+            signinBtn.onclick = function(){
+                nameField.style.maxHeight = "0";
+                title.innerHTML = "Sign in";
+                signupBtn.classList.add("disable");
+                signinBtn.classList.remove("disable")
+            }
+
+            signupBtn.onclick = function(){
+                nameField.style.maxHeight = "60px";
+                title.innerHTML = "Sign up";
+                signupBtn.classList.remove("disable");
+                signinBtn.classList.add("disable");
+            }
+
+            
+            // var x = document.getElementById("login")
+            // var y = document.getElementById("register")
+            // var z = document.getElementById("btn")
+            var escape = document.getElementsByClassName("escapeButton");
+            
+           
+            document.querySelector(".escapeButton").addEventListener("click", function(){
+                document.querySelector(".hero").style.display = "none";
+            })
+           
+
+        </script>
+</body>
+</html>
